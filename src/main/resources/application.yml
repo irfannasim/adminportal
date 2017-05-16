@@ -1,0 +1,76 @@
+#### Context Information ####
+
+server:
+  port: 8080
+  contextPath: /AdminPortal
+##############################################
+
+#### Deployment Profiles ####
+#### Local Or Default ####
+spring:
+  profiles: local, default
+datasource:
+  adminportal:
+    url: jdbc:mysql://localhost:3306/adminportal
+    username: root
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+    defaultSchema:
+    maxPoolSize: 20
+    hibernate:
+      #create-drop -> for drop and create again schema
+      hbm2ddl.method: update
+      show_sql: true
+      format_sql: true
+      dialect: org.hibernate.dialect.MySQLDialect
+
+#### Dev ####
+#spring:
+#  profiles: prod
+#datasource:
+#  adminportal:
+#    url: jdbc:mysql://localhost:3306/websystique
+#    username: myuser
+#    password: mypassword
+#    driverClassName: com.mysql.jdbc.Driver
+#    defaultSchema:
+#    maxPoolSize: 20
+#    hibernate:
+#      hbm2ddl.method: update
+#      show_sql: true
+#      format_sql: true
+#      dialect: org.hibernate.dialect.MySQLDialect
+
+#### Staging ####
+#spring:
+#  profiles: prod
+#datasource:
+#  adminportal:
+#    url: jdbc:mysql://localhost:3306/websystique
+#    username: myuser
+#    password: mypassword
+#    driverClassName: com.mysql.jdbc.Driver
+#    defaultSchema:
+#    maxPoolSize: 20
+#    hibernate:
+#      hbm2ddl.method: update
+#      show_sql: true
+#      format_sql: true
+#      dialect: org.hibernate.dialect.MySQLDialect
+
+#### Production ####
+#spring:
+#  profiles: prod
+#datasource:
+#  adminportal:
+#    url: jdbc:mysql://localhost:3306/websystique
+#    username: myuser
+#    password: mypassword
+#    driverClassName: com.mysql.jdbc.Driver
+#    defaultSchema:
+#    maxPoolSize: 20
+#    hibernate:
+#      hbm2ddl.method: update
+#      show_sql: true
+#      format_sql: true
+#      dialect: org.hibernate.dialect.MySQLDialect
