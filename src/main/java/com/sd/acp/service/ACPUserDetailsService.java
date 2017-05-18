@@ -56,7 +56,7 @@ public class ACPUserDetailsService implements UserDetailsService {
         if (user.getRole().getName().equals("admin")) {
             grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
         } else if (user.getRole().getName().equals("client")) {
-            grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_USER"));
+            grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_CLIENT"));
         }
         return grantedAuthorities;
     }
